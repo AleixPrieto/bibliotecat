@@ -32,6 +32,16 @@ class Ejemplares
      */
     private $precio;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Prestamos", mappedBy="ejemplares")
+     */
+    private $prestamos;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Libros", inversedBy="ejemplares")
+     */
+    private $libros;
+
     public function getId(): ?int
     {
         return $this->id;

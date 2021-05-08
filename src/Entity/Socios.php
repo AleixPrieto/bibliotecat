@@ -84,6 +84,11 @@ class Socios implements UserInterface
      */
     private $alta;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Prestamos", mappedBy="socios")
+     */
+    private $prestamos;
+
 
 
     public function getId(): ?int

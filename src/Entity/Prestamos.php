@@ -32,6 +32,16 @@ class Prestamos
      */
     private $devolucion;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Socios", inversedBy="prestamos")
+     */
+    private $socios;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Ejemplares", inversedBy="prestamos")
+     */
+    private $ejemplares;
+
     public function getId(): ?int
     {
         return $this->id;

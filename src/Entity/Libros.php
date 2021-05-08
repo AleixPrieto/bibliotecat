@@ -52,6 +52,11 @@ class Libros
      */
     private $edadrecomendada;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ejemplares", mappedBy="libros")
+     */
+    private $ejemplares;
+
     public function getId(): ?int
     {
         return $this->id;
