@@ -79,10 +79,10 @@ class Socios implements UserInterface
      */
     private $telefono;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $alta;
+    // /**
+    //  * @ORM\Column(type="date", nullable=true)
+    //  */
+    // private $alta;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Prestamos", mappedBy="socios")
@@ -354,23 +354,23 @@ class Socios implements UserInterface
         return $this;
     }
 
-    /**
-     * Get the value of alta
-     */ 
-    public function getAlta()
-    {
-        return $this->alta;
-    }
+    // /**
+    //  * Get the value of alta
+    //  */ 
+    // public function getAlta()
+    // {
+    //     return $this->alta;
+    // }
 
-    /**
-     * Set the value of alta
-     *
-     * @return  self
-     */ 
-    public function setAlta($alta)
-    {
-        $this->alta = $alta;
+    // /**
+    //  * Set the value of alta
+    //  *
+    //  * @return  self
+    //  */ 
+    // public function setAlta(\DateTime $alta=null)
+    // {
+    //     $this->alta = $alta;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 }
